@@ -200,28 +200,25 @@ export default function Hero() {
           >
 
 
-            <button
-
-              className="
-                flex
-                items-center
-                gap-2
-                rounded-full
-                bg-cyan-400
-                px-7
-                py-3
-                font-semibold
-                text-black
-                transition
-                hover:scale-105
-              "
-            >
-
-              View Projects
-
-              <ArrowRight size={18}/>
-
-            </button>
+            <a
+href="#projects"
+className="
+flex
+items-center
+gap-2
+rounded-full
+bg-cyan-400
+px-7
+py-3
+font-semibold
+text-black
+transition
+hover:scale-105
+"
+>
+View Projects
+<ArrowRight size={18}/>
+</a>
 
 
 
