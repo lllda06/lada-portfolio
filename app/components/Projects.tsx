@@ -1,325 +1,462 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { ExternalLink, Brain, Database, Code2 } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
 
-const featuredProjects = [
+const projects = [
+
   {
-    title: "Airflow ML Pipeline",
+    title: "AIRFLOW ML PIPELINE",
     description:
-      "Automated machine learning workflow for model training and prediction using Apache Airflow, Docker and Scikit-learn.",
-    stack: [
+      "End-to-end Machine Learning pipeline orchestration using Apache Airflow, Docker and Scikit-learn. Automated model training and prediction workflow.",
+    image:
+      "/projects/airflow.png",
+    tags:[
       "Python",
-      "Apache Airflow",
+      "Airflow",
       "Docker",
-      "Scikit-learn",
+      "Scikit-learn"
     ],
-    link:
+    github:
       "https://github.com/lllda06/AIRFLOW-ML-PIPELINE",
+    featured:true,
+    icon:Brain
   },
 
-  {
-    title: "ML Prediction Service",
-    description:
-      "Production-oriented machine learning API for serving trained models with FastAPI and REST endpoints.",
-    stack: [
-      "Python",
-      "FastAPI",
-      "Scikit-learn",
-      "Docker",
-    ],
-    link:
-      "https://github.com/lllda06/FASTAPI-PROJECT",
-  },
 
   {
-    title: "Used Cars Data Analysis",
+    title:"Data Analysis - Used Cars",
     description:
-      "Data cleaning, exploratory analysis and visualization of vehicle datasets with feature preparation.",
-    stack: [
+      "Exploratory Data Analysis, data cleaning and visualization of vehicle datasets. Finding patterns affecting car prices.",
+    image:
+      "/projects/data-analysis.png",
+    tags:[
       "Python",
       "Pandas",
-      "Jupyter",
-      "Data Analysis",
+      "EDA",
+      "Visualization"
     ],
-    link:
+    github:
       "https://github.com/lllda06/DATA-ANALYSIS",
+    icon:Database
   },
 
+
   {
-    title: "FlatmateFlow",
+    title:"FastAPI ML Service",
     description:
-      "Household management platform with REST API architecture for organizing tasks and responsibilities.",
-    stack: [
+      "Backend API project with FastAPI, SQLAlchemy and SQLite. Demonstrates REST architecture and data management.",
+    image:
+      "/projects/fastapi.png",
+    tags:[
+      "FastAPI",
+      "Python",
+      "SQLAlchemy"
+    ],
+    github:
+      "https://github.com/lllda06/FASTAPI-PROJECT",
+    icon:Code2
+  },
+
+
+  {
+    title:"FlatmateFlow",
+    description:
+      "Django REST application for managing household tasks with authentication and PostgreSQL.",
+    image:
+      "/projects/flatmate.png",
+    tags:[
       "Django",
       "DRF",
-      "PostgreSQL",
-      "Python",
+      "PostgreSQL"
     ],
-    link:
+    github:
       "https://github.com/lllda06/FLATMATEFLOW",
+    icon:Code2
   },
-];
 
 
-const softwareProjects = [
   {
-    title: "CodeVerse",
+    title:"CodeVerse",
     description:
-      ".NET MAUI mobile application for digital learning with courses, materials and student progress tracking.",
-    stack: [
+      ".NET MAUI mobile application for digital learning platforms.",
+    image:
+      "/projects/codeverse.png",
+    tags:[
       "C#",
-      ".NET MAUI",
+      ".NET MAUI"
     ],
-    link:
+    github:
       "https://github.com/lllda06/CodeVerse",
+    icon:Code2
   },
 
-  {
-    title: "API Events",
-    description:
-      "Django REST Framework API for city events with authentication and user subscriptions.",
-    stack: [
-      "Python",
-      "Django",
-      "DRF",
-      "JWT",
-    ],
-    link:
-      "https://github.com/lllda06/API-EVENTS",
-  },
 
-  {
-    title: "LINAZA.KIDS",
-    description:
-      "Responsive website for a children's clothing brand built with modern frontend technologies.",
-    stack: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-    ],
-    link:
-      "https://github.com/lllda06/LINAZA.KIDS",
-  },
 ];
 
 
-function ProjectCard({
-  project,
-}: {
-  project: {
-    title: string;
-    description: string;
-    stack: string[];
-    link: string;
-  };
-}) {
-
-  return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: 30,
-      }}
-
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-
-      viewport={{
-        once: true,
-      }}
-
-      className="
-        rounded-3xl
-        border
-        border-white/10
-        bg-white/5
-        p-6
-        backdrop-blur-xl
-        transition
-        hover:border-cyan-400/50
-        hover:-translate-y-2
-      "
-    >
-
-      <h3
-        className="
-          text-2xl
-          font-semibold
-          text-white
-        "
-      >
-        {project.title}
-      </h3>
 
 
-      <p
-        className="
-          mt-4
-          text-slate-400
-          leading-relaxed
-        "
-      >
-        {project.description}
-      </p>
+export default function Projects(){
 
 
-      <div
-        className="
-          mt-5
-          flex
-          flex-wrap
-          gap-2
-        "
-      >
+return(
 
-        {project.stack.map((item)=>(
-          <span
-            key={item}
-            className="
-              rounded-full
-              border
-              border-white/10
-              px-3
-              py-1
-              text-sm
-              text-cyan-300
-            "
-          >
-            {item}
-          </span>
-        ))}
-
-      </div>
+<section
+id="projects"
+className="
+px-6
+py-24
+"
+>
 
 
-      <a
-        href={project.link}
-        target="_blank"
-        className="
-          mt-6
-          inline-flex
-          items-center
-          gap-2
-          text-sm
-          text-white
-          transition
-          hover:text-cyan-400
-        "
-      >
-        View Project
-        <FaGithub size={18}/>
-            GitHub
-      </a>
+<div
+className="
+mx-auto
+max-w-7xl
+"
+>
 
 
-    </motion.div>
-  );
+<motion.h2
+
+initial={{
+opacity:0,
+y:30
+}}
+
+whileInView={{
+opacity:1,
+y:0
+}}
+
+viewport={{
+once:true
+}}
+
+className="
+text-4xl
+md:text-5xl
+font-bold
+text-white
+"
+
+>
+
+My
+<span
+className="
+text-cyan-400
+"
+>
+Projects
+</span>
+
+</motion.h2>
+
+
+
+<p
+className="
+mt-5
+max-w-2xl
+text-slate-400
+"
+>
+A collection of Machine Learning,
+Data Science and Software Engineering projects.
+</p>
+
+
+
+
+
+<div
+className="
+mt-14
+grid
+gap-8
+md:grid-cols-2
+"
+>
+
+
+{
+projects.map((project,index)=>{
+
+
+const Icon = project.icon;
+
+
+return(
+
+
+<motion.article
+
+
+key={project.title}
+
+
+initial={{
+opacity:0,
+y:50
+}}
+
+
+whileInView={{
+opacity:1,
+y:0
+}}
+
+
+viewport={{
+once:true
+}}
+
+
+transition={{
+delay:index*0.1
+}}
+
+
+whileHover={{
+y:-10
+}}
+
+
+className={`
+group
+overflow-hidden
+rounded-3xl
+border
+border-white/10
+bg-white/5
+backdrop-blur-xl
+${project.featured ? "md:col-span-2" : ""}
+`}
+
+
+
+>
+
+
+
+<div
+className="
+grid
+md:grid-cols-2
+"
+>
+
+
+<div
+className="
+relative
+h-64
+overflow-hidden
+"
+>
+
+
+<Image
+
+src={project.image}
+
+alt={project.title}
+
+fill
+
+className="
+object-cover
+transition
+duration-700
+group-hover:scale-110
+"
+
+/>
+
+
+<div
+className="
+absolute
+inset-0
+bg-gradient-to-t
+from-black/70
+to-transparent
+"
+/>
+
+
+</div>
+
+
+
+
+
+<div
+className="
+p-8
+"
+>
+
+
+<div
+className="
+flex
+items-center
+gap-3
+text-cyan-400
+"
+>
+
+<Icon size={25}/>
+
+<h3
+className="
+text-2xl
+font-bold
+text-white
+"
+>
+
+{project.title}
+
+</h3>
+
+
+</div>
+
+
+
+
+<p
+className="
+mt-5
+text-slate-400
+leading-relaxed
+"
+>
+
+{project.description}
+
+</p>
+
+
+
+
+
+<div
+className="
+mt-6
+flex
+flex-wrap
+gap-2
+"
+>
+
+{
+project.tags.map(tag=>(
+
+
+<span
+
+key={tag}
+
+className="
+rounded-full
+border
+border-white/10
+bg-black/20
+px-3
+py-1
+text-sm
+text-slate-300
+"
+
+>
+
+{tag}
+
+</span>
+
+
+))
 }
 
 
-export default function Projects() {
-
-  return (
-
-    <section
-      id="projects"
-      className="
-        px-6
-        py-24
-      "
-    >
-
-      <div className="mx-auto max-w-6xl">
+</div>
 
 
-        <h2
-          className="
-            text-4xl
-            md:text-5xl
-            font-bold
-            text-white
-          "
-        >
-          Featured <span className="text-cyan-400">Projects</span>
-        </h2>
 
 
-        <p
-          className="
-            mt-5
-            text-slate-400
-          "
-        >
-          Machine learning systems, data projects
-          and software applications.
-        </p>
+<a
+
+href={project.github}
+
+target="_blank"
+
+className="
+mt-8
+inline-flex
+items-center
+gap-2
+rounded-full
+bg-cyan-400
+px-5
+py-2
+font-semibold
+text-black
+transition
+hover:scale-105
+"
+
+>
+
+<FaGithub size={18}/>
+
+GitHub
+
+<ExternalLink size={16}/>
+
+</a>
 
 
-        <h3
-          className="
-            mt-12
-            text-2xl
-            font-semibold
-            text-white
-          "
-        >
-          ⭐ ML & Data
-        </h3>
 
 
-        <div
-          className="
-            mt-6
-            grid
-            gap-6
-            md:grid-cols-2
-          "
-        >
-          {featuredProjects.map((project)=>(
-            <ProjectCard
-              key={project.title}
-              project={project}
-            />
-          ))}
-        </div>
+</div>
 
 
-        <h3
-          className="
-            mt-16
-            text-2xl
-            font-semibold
-            text-white
-          "
-        >
-          💻 Software Development
-        </h3>
+</div>
 
 
-        <div
-          className="
-            mt-6
-            grid
-            gap-6
-            md:grid-cols-2
-          "
-        >
-          {softwareProjects.map((project)=>(
-            <ProjectCard
-              key={project.title}
-              project={project}
-            />
-          ))}
-        </div>
+
+</motion.article>
 
 
-      </div>
+)
 
-    </section>
 
-  );
+})
+}
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+)
+
+
 }
