@@ -191,13 +191,14 @@ export default function Hero() {
 
 
           <div
-            className="
-              mt-10
-              flex
-              flex-wrap
-              gap-4
-            "
-          >
+ className="
+   mt-10
+   flex
+   flex-col
+   gap-4
+   sm:flex-row
+ "
+>
 
 
             <a
@@ -223,29 +224,32 @@ View Projects
 
 
 
-            <button
+            <a
+  href="https://github.com/lllda06"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    flex
+    items-center
+    justify-center
+    gap-2
+    rounded-full
+    border
+    border-white/20
+    px-7
+    py-3
+    text-white
+    transition
+    hover:border-cyan-400
+    hover:text-cyan-400
+  "
+>
 
-              className="
-                flex
-                items-center
-                gap-2
-                rounded-full
-                border
-                border-white/20
-                px-7
-                py-3
-                text-white
-                transition
-                hover:border-cyan-400
-                hover:text-cyan-400
-              "
-            >
+  <FaGithub size={18}/>
 
-              <FaGithub/>
+  GitHub
 
-              GitHub
-
-            </button>
+</a>
 
 
           </div>
@@ -330,12 +334,14 @@ View Projects
 
 
         <div
-          className="
-            relative
-            flex
-            justify-center
-          "
-        >
+  className="
+    relative
+    flex
+    justify-center
+    md:justify-center
+    lg:justify-end
+  "
+>
 
 
 
@@ -354,12 +360,19 @@ View Projects
     repeat:Infinity
   }}
 
-  className="
-    relative
-    h-[420px]
-    w-[420px]
-    -translate-x-10
-  "
+className="
+  relative
+  h-[260px]
+  w-[260px]
+  -translate-x-6
+  sm:h-[300px]
+  sm:w-[300px]
+  sm:-translate-x-4
+  md:h-[420px]
+  md:w-[420px]
+  md:translate-x-0
+  lg:-translate-x-10
+"
 
 >
 
@@ -385,21 +398,22 @@ View Projects
 
             <Image
 
-              src="/profile/lada.png"
+ src="/profile/lada.png"
 
-              alt="Lada Bahdanovich"
+ alt="Lada Bahdanovich"
 
-              fill
+ fill
 
-              className="
-                relative
-                rounded-full
-                border
-                border-white/20
-                object-cover
-              "
+ priority
 
-            />
+ className="
+   rounded-full
+   border
+   border-white/20
+   object-cover
+ "
+
+/>
 
 
           </motion.div>
@@ -432,8 +446,10 @@ View Projects
 
             className="
               absolute
-              -right-16
-              bottom-15
+              right-0
+bottom-0
+md:-right-16
+md:bottom-15
               z-20
               w-52
               rounded-3xl
