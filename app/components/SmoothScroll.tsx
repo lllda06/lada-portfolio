@@ -3,29 +3,26 @@
 import { ReactNode, useEffect } from "react";
 import Lenis from "lenis";
 
-
 export default function SmoothScroll({
   children,
 }: {
   children: ReactNode;
 }) {
 
-
   useEffect(() => {
-
 
     const lenis = new Lenis({
 
-      duration: 0.5,
+      duration: 0.65,
 
       smoothWheel: true,
 
-      wheelMultiplier: 1,
+      wheelMultiplier: 0.9,
 
       touchMultiplier: 1,
 
       easing: (t) =>
-        Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        1 - Math.pow(1 - t, 4),
 
     });
 
