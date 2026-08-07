@@ -366,7 +366,7 @@ className="
   relative
   h-[260px]
   w-[260px]
-  -translate-x-14
+  -translate-x-5
   sm:h-[300px]
   sm:w-[300px]
   sm:-translate-x-12
