@@ -177,14 +177,13 @@ export default function Navbar() {
 
         <div
 
-          className="
-            hidden
-            md:flex
-            items-center
-            gap-3
-          "
+  className="
+    flex
+    items-center
+    gap-2
+  "
 
-        >
+>
 
 
           <a

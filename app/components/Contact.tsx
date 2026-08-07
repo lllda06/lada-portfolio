@@ -90,15 +90,17 @@ md:text-5xl
 "
 >
 
-Let's build
+Let's build{" "}
+
 <span
-className="
-text-cyan-400
-"
+  className="
+    text-cyan-400
+  "
 >
- something
+  something
 </span>
- together
+
+{" "}together
 
 </h2>
 

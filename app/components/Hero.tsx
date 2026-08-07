@@ -338,8 +338,10 @@ View Projects
     relative
     flex
     justify-center
-    md:justify-center
     lg:justify-end
+
+    pb-32
+    md:pb-0
   "
 >
 
@@ -364,14 +366,14 @@ className="
   relative
   h-[260px]
   w-[260px]
-  -translate-x-6
+  -translate-x-14
   sm:h-[300px]
   sm:w-[300px]
-  sm:-translate-x-4
+  sm:-translate-x-12
   md:h-[420px]
   md:w-[420px]
-  md:translate-x-0
-  lg:-translate-x-10
+  md:translate-x-15
+  lg:-translate-x-50
 "
 
 >
@@ -423,123 +425,116 @@ className="
 
 
 
-          {/* AI CARD */}
+{/* AI CARD */}
 
+<motion.div
+  initial={{
+    opacity: 0,
+    y: 40,
+  }}
+  animate={{
+    opacity: 1,
+    y: 0,
+  }}
+  transition={{
+    delay: 1,
+    duration: 0.7,
+  }}
+  whileHover={{
+    y: -6,
+    scale: 1.03,
+  }}
+  className="
+    absolute
 
+    left-1/2
+    -translate-x-1/2
+    -bottom-15
 
-          <motion.div
+    w-[240px]
 
-            initial={{
-              opacity:0,
-              x:50
-            }}
+    rounded-3xl
+    border
+    border-white/10
 
-            animate={{
-              opacity:1,
-              x:0
-            }}
+    bg-slate-900/70
+    backdrop-blur-xl
 
-            transition={{
-              delay:1
-            }}
-            
+    p-5
+    shadow-2xl
+    z-20
 
-            className="
-              absolute
-              right-0
-bottom-0
-md:-right-16
-md:bottom-15
-              z-20
-              w-52
-              rounded-3xl
-              border
-              border-white/10
-              bg-white/10
-              p-5
-              shadow-2xl
-              backdrop-blur-xl
-            "
+    md:left-auto
+    md:translate-x-0
+    md:right-0
+    md:bottom-0
+    md:w-56
+  "
+>
 
-          >
+  <div
+    className="
+      flex
+      items-center
+      gap-2
+      text-cyan-400
+      font-semibold
+      text-base
+    "
+  >
+    <Brain size={20} />
 
+    AI PROFILE
 
-            <div
+  </div>
 
-              className="
-                flex
-                items-center
-                gap-2
-                font-semibold
-                text-cyan-400
-              "
+  <div
+    className="
+      mt-5
+      space-y-3
+      text-sm
+      text-slate-200
+    "
+  >
 
-            >
+    <div className="flex justify-between">
+      <span>Python</span>
+      <span>★★★★★</span>
+    </div>
 
-              <Brain size={20}/>
+    <div className="flex justify-between">
+      <span>Machine Learning</span>
+      <span>★★★★★</span>
+    </div>
 
-              AI PROFILE
+    <div className="flex justify-between">
+      <span>Data Science</span>
+      <span>★★★★★</span>
+    </div>
 
+    <div className="flex justify-between">
+      <span>Backend</span>
+      <span>★★★★★</span>
+    </div>
 
-            </div>
+  </div>
 
+  <div
+    className="
+      mt-5
+      border-t
+      border-white/10
+      pt-4
+      text-center
+      text-xs
+      text-green-400
+      font-medium
+    "
+  >
+    ● Open to AI & ML opportunities
+  </div>
 
-
-
-            <div
-
-              className="
-                mt-5
-                space-y-3
-                text-sm
-                text-slate-300
-              "
-
-            >
-
-              <p>
-                ⚡ Python
-              </p>
-
-
-              <p>
-                🧠 Machine Learning
-              </p>
-
-
-              <p>
-                📊 Data Science
-              </p>
-
-
-              <p>
-                ⚙ ML Models
-              </p>
-
-
-            </div>
-
-
-
-
-
-            <div
-
-              className="
-                mt-5
-                text-xs
-                text-green-400
-              "
-
-            >
-
-              ● Building intelligent systems
-
-
-            </div>
-
-
-          </motion.div>
+</motion.div>
 
 
 
