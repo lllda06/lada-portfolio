@@ -64,6 +64,7 @@ export default function Hero() {
             }}
 
             className="
+              mt-14
               mb-6
               font-mono
               text-sm
