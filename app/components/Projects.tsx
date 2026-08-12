@@ -46,18 +46,19 @@ const projects = [
 
 
   {
-    title:"FastAPI ML Service",
+    title:"ML Prediction API",
     description:
-      "Backend API project with FastAPI, SQLAlchemy and SQLite. Demonstrates REST architecture and data management.",
+      "End-to-end machine learning service for predicting user target actions using CatBoost and FastAPI.",
     image:
       "/projects/fastapi.png",
     tags:[
-      "FastAPI",
       "Python",
-      "SQLAlchemy"
+      "Machine Learning",
+      "CatBoost",
+      "FastAPI"
     ],
     github:
-      "https://github.com/lllda06/FASTAPI-PROJECT",
+      "https://github.com/lllda06/ML-PREDICTION-API",
     icon:Code2
   },
 
