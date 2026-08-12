@@ -50,7 +50,7 @@ const projects = [
     description:
       "End-to-end machine learning service for predicting user target actions using CatBoost and FastAPI.",
     image:
-      "/projects/fastapi.png",
+      "/projects/ml-api.png",
     tags:[
       "Python",
       "Machine Learning",
